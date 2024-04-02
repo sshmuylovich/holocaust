@@ -6,6 +6,7 @@ date: today
 date-format: long
 format: pdf
 number-sections: true
+toc: TRUE
 bibliography: references.bib
 ---
 
@@ -46,10 +47,18 @@ The dataset [@citeHolocaustData] encompassed the details of 65,280 victims as fo
 - Religion: The religion of the prisoners.
 
 ## Nationality
+Nationality was calculated by mapping city names from the Auschwitz dataset [@citeHolocaustData] found in the Birthplace column to city names from the `world.cities` database found in the names column and accessed via R's built in maps [@citeMaps] package. The `world.cities` database comprised mainly of cities with population greater than about 40,000 but also includes all capital cities and some smaller towns [@citeMaps]. One limitation of this data matching method is that certain cities could belong to multiple countries which would result in duplicates of the same person but with different nationalities. This is limitation is evident when the mapping results in 68,188 occurrences when the original only had 65,280 [@citeHolocaustData]. Furthermore, not all cities were matched with a country. This is, however, a fairly accurate way of mapping city and country given that the original dataset provides no evidence for country of origin. 
 
 ## Age at Death
+Age at death in years was calculated by subtracting date of birth from date of death for every individual. This process revealed one limitation of the original data set [@citeHolocaustData] when several calculations yielded 941 and 942. This was due to date of birth being incorrectly recorded as in the year 1000. Such inconsistencies could be explained by measurement error or data recording error. 
 
-## Religion
+# Results {#section-results}
+49,695 of the individuals (72.87%) were from a city that was not mapped, suggesting that the overwhelming majority of Auschwitz victims were not from large cities. Poland was the highest recorded nationality with 4,319 individuals (6.33%) which makes sense as Auschwitz is located in Poland. The four nationalities with the next highest number of individuals murdered in Auschwitz from 1942 - 1943 (in order) are France, Slovakia, Germany, and the Netherlands. The five countries with the lowest number of individuals murdered in Auschwitz from 1942 - 1943 (in order) are American Samoa, Australia, Bahamas, Bolivia, and Chile. 
+
+2,084 of the individuals (3.06%) were not able to have their age at death calculated, suggesting missing data. Age 37
+was the highest recorded age at death with 1,915 individuals (2.81%). The four ages at death with the next highest number of individuals murdered in Auschwitz from 1942 - 1943 (in order) are 38, 20, 19, 39. The five ages at death with the lowest number of individuals murdered in Auschwitz from 1942 - 1943 (in order) are 84 (tie for 1st), 89 (tie for 1st), 122 (tie for 1st), 87 (tie for 4th), 88 (tie for 4th), and 90 (tie for 4th) with 1-2 individuals each. 1.5 million children were murdered in the Holocaust. Our results show the deaths of a total of 5,782 children under 18, 407 of which had not yet reached the age of 1. 
+
+30,648 of the individuals (44.95%) were Catholic while 30,424 of the individuals (44.62%) were Jewish. This is an extremely interesting statistic and is worth exploring further because they contradict the assumption that the majority of victims were Jewish which could be assumed from the fact that Nazi genocidal policies were targeted primarily at Jews. The four religions with the next highest number of individuals murdered in Auschwitz from 1942 - 1943 (in order) are Protestant, Greek Orthodox, and Atheist - although none make up even a tenth of Catholics or Jews. The five religions with the lowest number of individuals murdered in Auschwitz from 1942 - 1943 (in order) are Agnostic (tie for 1st), Muslim (tie for 1st), Unaffiliated (tie for 1st), Buddhist (tie for 4th), and Hussite (tie for 4th) with 1-2 individuals each.
 
 \newpage
 
