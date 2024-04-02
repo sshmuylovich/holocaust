@@ -1,0 +1,58 @@
+---
+title: "Auschwitz 1942-1943 Death Certificates Analysis"
+author: Sima Shmuylovich
+thanks: "Code and data are available at: https://github.com/sshmuylovich/holocaust.git."
+date: today
+date-format: long
+format: pdf
+number-sections: true
+bibliography: references.bib
+---
+
+# Introduction {#sec-Introduction}
+The Holocaust stands as one of the most harrowing and systematic genocides in human history, orchestrated by Nazi Germany under Adolf Hitler's regime during World War II. Between 1941 and 1945, six million Jews, along with millions of others deemed undesirable or enemies of the state, including Romani people, disabled individuals, Polish and Soviet prisoners, and political dissidents, were systematically murdered. The Holocaust serves as a reminder of the consequences of unchecked hate, prejudice, and the dangers of totalitarian regimes. It underscores the importance of education, remembrance, and vigilance against the forces of intolerance and discrimination to ensure such atrocities are never repeated. 
+
+The Nazis' had a meticulous approach to record-keeping as they carried out their systematic genocidal policies. Their obsessively detailed documentation, ranging from the identification of prisoners in concentration camps to the cataloging of possessions seized from Jewish families, underscores the horrifying precision and bureaucracy with which the Holocaust was executed. The vast archives, including lists, forms, and reports, not only facilitated the industrial-scale persecution and murder of millions but also now serve as undeniable evidence of the atrocities committed. 
+
+Auschwitz, officially known as Auschwitz-Birkenau, was the largest and most notorious of the Nazi concentration and extermination camps, located in occupied Poland. Established in 1940, it became the epicenter of the Holocaust's mass murder, where approximately 1.1 million people were killed, the majority of whom were Jews. 
+
+The analysis of Auschwitz's 1942 - 1943 Death Certificates [@citeHolocaustData], as catalogued in the United States Holocaust Memorial Museum's Holocaust Survivors and Victims Database, is of profound importance for several reasons. First and foremost, it provides tangible documentation of the atrocities committed during one of the darkest chapters of human history, offering concrete evidence of the lives extinguished at Auschwitz Concentration Camp between 1942 and 1943, and serving not only as a historical record but also as a tool for education and remembrance. For some Holocaust victims, this may be the only proof of their existence. Analyzing these death certificates allows historians, scholars, and the public to bear witness to the scale and specificity of the genocide, helping to counteract denial and distortion of the Holocaust. Furthermore, it provides a basis for memorializing the victims, offering a semblance of dignity to those who were dehumanized and murdered, by acknowledging their individuality and the lives they led before becoming victims of Nazi persecution. 
+
+This paper outlines the process of creating a shiny app [@citeShiny] which shows the number of people murdered by nationality, age at death, and religion and allows users to specify the groups they are interested in seeing data for. 
+This paper outlines the process of creating a Shiny app, which leverages R's [@citeR] interactive web application framework [@citeShiny], designed to display the number of people murdered during the Holocaust by nationality, age at death, and religion, with customizable views for specific groups. Such an app serves several vital functions:
+
+1. It acts as a powerful educational resource, allowing users to interact with the data to understand the scale and specifics of the Holocaust. By enabling users to select and view data according to different demographics, the app can provide personalized insights, making the historical events more relatable and impactful.
+
+2. The app serves as a digital memorial for the victims, acknowledging their identities and the diversity of lives cut short by the Holocaust. It allows for the individual and collective remembrance of victims, not just as numbers, but as people with distinct backgrounds and stories.
+
+3. For scholars and researchers, such an app is an invaluable tool for analyzing patterns and trends within the genocide, such as targeting specific groups, age-related vulnerabilities, and the geographical spread of Nazi crimes. This can lead to deeper understandings of the mechanisms of genocide and the societal factors involved.
+
+4. The app provides direct access to evidence of the Holocaust, which can be an effective tool against denial and distortion. By presenting irrefutable data in an accessible and engaging manner, it helps ensure that the facts of the Holocaust remain undeniable.
+
+5. By humanizing the statistics through the breakdown of victims' nationalities, ages, and religions, the app encourages empathy for the victims and fosters a greater appreciation for diversity and tolerance, serving as a poignant reminder of the dangers of hatred and bigotry.
+
+# Data {#sec-Data}
+
+The data used in this paper was gathered from the Holocaust Survivors and Victims Database hosted on the United States Holocaust Memorial Museum website [@citeHolocaustData] and analyzed using R [@citeR] with help from `dplyr` [@citeDplyr], `tidyverse` [@citeTidyverse], `shiny` [@citeShiny], `DT` [@citeDT], `ggplot2` [@citeGgplot2], `maps` [@citeMaps], `here` [@citeHere], `knitr` [@citeKnitr], and `kableExtra` [@citeKableExtra].
+
+The dataset [@citeHolocaustData] encompassed the details of 65,280 victims as found on Death Certificates recorded at Auschwitz between July 29, 1941, and December 31, 1943. This dataset, includes the following variables:
+
+- Last Name: The last name of the prisoners in Auschwitz concentration camp.
+- First Names(s).: The first name of the prisoners in Auschwitz concentration camp.
+- Date of Birth: The date of birth for prisoners in Auschwitz concentration camp, in the YYYY-MM-DD form.
+- Date of Death: The date of death for prisoners in Auschwitz concentration camp, in the YYYY-MM-DD form.
+- Birthplace: The birthplaces of the prisoners, recorded as a city.
+- Residence: The residence of the prisoners, recorded as a city.
+- Religion: The religion of the prisoners.
+
+## Nationality
+
+## Age at Death
+
+## Religion
+
+\newpage
+
+# References
+
+
